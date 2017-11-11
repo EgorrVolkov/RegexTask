@@ -1,7 +1,6 @@
 package ua.training;
 
-import java.util.Locale;
-import java.util.ResourceBundle;
+import static ua.training.MultiLang.Messages.*;
 
 /**
  * Basic View class in MVC architectural pattern.
@@ -13,14 +12,6 @@ import java.util.ResourceBundle;
 class View {
 
     /**
-     * {@code messagesBundle} used for operating a messages bundle corresponding to current language.
-     * new Locale("en") for English, new Locale("ru") for Russian.
-     */
-
-    private static final ResourceBundle messagesBundle =
-            ResourceBundle.getBundle(Internationalization.MESSAGES_BUNDLE_NAME, new Locale("en"));
-
-    /**
      * Prints message passed.
      * @param message current message to print
      */
@@ -30,50 +21,50 @@ class View {
     }
 
     /**
-     * Calls {@link #printMessage(String)} passing current {@link Internationalization} login requesting message.
+     * Calls {@link #printMessage(String)} passing current login requesting message.
      */
 
     void printInputLoginMessage() {
-        printMessage(messagesBundle.getString(Internationalization.INPUT_LOGIN_MESSAGE));
+        printMessage(messagesBundle.getString(INPUT_LOGIN_MESSAGE));
     }
 
     /**
-     * Calls {@link #printMessage(String)} passing current {@link Internationalization} name requesting message.
+     * Calls {@link #printMessage(String)} passing current name requesting message.
      */
 
     void printInputNameMessage() {
-        printMessage(messagesBundle.getString(Internationalization.INPUT_NAME_MESSAGE));
+        printMessage(messagesBundle.getString(INPUT_NAME_MESSAGE));
     }
 
     /**
-     * Calls {@link #printMessage(String)} passing current {@link Internationalization} E-mail requesting message.
+     * Calls {@link #printMessage(String)} passing current E-mail requesting message.
      */
 
     void printInputEmailMessage() {
-        printMessage(messagesBundle.getString(Internationalization.INPUT_EMAIL_MESSAGE));
+        printMessage(messagesBundle.getString(INPUT_EMAIL_MESSAGE));
     }
 
     /**
-     * Calls {@link #printMessage(String)} passing current {@link Internationalization} login incorrect message.
+     * Calls {@link #printMessage(String)} passing current login incorrect message.
      */
 
     void printOutputLoginIncorrect() {
-        printMessage(messagesBundle.getString(Internationalization.OUTPUT_LOGIN_INCORRECT));
+        printMessage(messagesBundle.getString(OUTPUT_LOGIN_INCORRECT));
     }
 
     /**
-     * Calls {@link #printMessage(String)} passing current {@link Internationalization} name incorrect message.
+     * Calls {@link #printMessage(String)} passing current name incorrect message.
      */
 
     void printOutputNameIncorrect() {
-        printMessage(messagesBundle.getString(Internationalization.OUTPUT_NAME_INCORRECT));
+        printMessage(messagesBundle.getString(OUTPUT_NAME_INCORRECT));
     }
 
     /**
-     * Calls {@link #printMessage(String)} passing current {@link Internationalization} E-mail incorrect message.
+     * Calls {@link #printMessage(String)} passing current E-mail incorrect message.
      */
 
     void printOutputEmailIncorrect() {
-        printMessage(messagesBundle.getString(Internationalization.OUTPUT_EMAIL_INCORRECT));
+        printMessage(messagesBundle.getString(OUTPUT_EMAIL_INCORRECT));
     }
 }
